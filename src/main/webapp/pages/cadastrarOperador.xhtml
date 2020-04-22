@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<!--por que existe esse h antes da tag?-->
+<h:head>
+    <title>Cadastro de Operadores</title>
+</h:head>
+
+<h:body>
+    <h3>Cadastro de Operador</h3>
+
+    <h3>
+        <h:form>
+            <h:commandLink value="Listar Operadores" action="#{cadastrarMBean.listar}"/>
+        </h:form>
+    </h3>
+
+    <h4>
+        <h:outputLabel id="oplMensagem" value="#{cadastrarMBean.mensagem}"/>
+    </h4>
+
+    <h:form>
+        <table>
+            <tr>
+                <td>
+                    <h:outputText id="lnome" value="Nome:"/>
+                </td>
+                <td>
+                    <h:inputText id="tnome" value="#{cadastrarMBean.operador.nome}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputText id="ltitulacao" value="Sobrenome:"/>
+                </td>
+                <td>
+                    <h:inputText id="ttitulacao" value="#{cadastrarMBean.operador.sobrenome}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputText id="lmatricula" value="Matricula:"/>
+                </td>
+                <td>
+                    <h:inputText id="tmatricula" value="#{cadastrarMBean.operador.matricula}"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h:commandButton id="submit" type="submit" action="#{cadastrarMBean.adicionarOperador}"
+                                     value="Salvar"/>
+                </td>
+            </tr>
+        </table>
+    </h:form>
+</h:body>
+
+</html>

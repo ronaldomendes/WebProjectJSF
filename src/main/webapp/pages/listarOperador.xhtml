@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+    <title>Listagem de operadores</title>
+</head>
+<body>
+
+<h3>Operadores Cadastrados</h3>
+<h3>
+    <h:form>
+        <h:commandLink value="+ Novo Operador" action="#{listarMBean.adicionar}"/>
+    </h:form>
+</h3>
+
+<h:dataTable value="#{listarMBean.listaOperadores}" var="op" border="1">
+
+    <h:column>
+        <f:facet name="header">Nome</f:facet>
+        #{op.nome}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Sobrenome</f:facet>
+        #{op.sobrenome}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Matricula</f:facet>
+        #{op.matricula}
+    </h:column>
+
+</h:dataTable>
+
+</body>
+</html>

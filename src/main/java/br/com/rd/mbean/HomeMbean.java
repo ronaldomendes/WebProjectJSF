@@ -1,4 +1,4 @@
-package br.com.rd;
+package br.com.rd.mbean;
 
 import javax.faces.bean.ManagedBean;
 
